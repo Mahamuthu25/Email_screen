@@ -1,5 +1,7 @@
 import 'dart:io';
 import 'package:email/core/colors/app_colors.dart';
+import 'package:email/screen/inbox.dart';
+import 'package:email/screen/sentitems.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -114,16 +116,7 @@ class _EmailScreenState extends State<EmailScreen>
 
         children: [
           /// INBOX TAB
-          const Center(
-            child: Text(
-              "No Inbox Items",
-              style: TextStyle(
-                fontSize: 18,
-                color: AppColors.houseOnTintColor,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-          ),
+          const InboxItemsScreen(),
 
           /// COMPOSE TAB
           SingleChildScrollView(
@@ -405,16 +398,7 @@ class _EmailScreenState extends State<EmailScreen>
           ),
 
           /// SENT TAB
-          const Center(
-            child: Text(
-              "No Sent Items",
-              style: TextStyle(
-                fontSize: 18,
-                color: AppColors.houseOnTintColor,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-          ),
+          const SentItemsScreen(),
         ],
       ),
     );
